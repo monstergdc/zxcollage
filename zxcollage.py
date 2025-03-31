@@ -258,6 +258,8 @@ if __name__ == '__main__':
 
     sizes = all_sizes()
     outfolder = "./generated"
+    if not os.path.exists(outfolder):
+        os.mkdir(outfolder)
     all_collages('save', folder, outfolder, sizes, pfx="zxcollage-", shuffle=True, logo=True, txt=True, zxbar=True)
 
 # EOF
